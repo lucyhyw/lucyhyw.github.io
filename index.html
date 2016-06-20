@@ -1,1 +1,107 @@
-Hello World
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Lucy Wei</title>
+  
+  <link href='https://fonts.googleapis.com/css?family=Cardo:400,400italic|Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="semantic.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+
+  
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script src="https://use.fontawesome.com/b9015655d4.js"></script>
+    <script>
+  		$(document).ready(function() {
+  			$("#view-projects").on("click", function(e) {
+  				e.preventDefault();
+  				$("body, html").animate({
+  					scrollTop: $("#projects").offset().top + 20
+  				}, 600)
+  			})
+  			$('.description').css('opacity', 0)
+  			$('.introduction').css('opacity', 0).slideDown("slow").animate(
+  				{opacity: 1},
+  				{queue: false, duration: "slow", complete: function() {
+  					$('.description').slideDown("slow").animate(
+  						{opacity: 1},
+  						{queue: false, duration: "slow"}
+  					)	
+  				}}
+  			)
+  			
+  		})
+  </script>
+</head>
+
+<body>
+  <div id="header" class="masthead">
+  	<div class="ui container">
+  		<div class="ui text menu" id="navigation">
+  			<div class="right menu">
+	  			<a class="item" href="mailto: lucyhyw@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+	  			<a class="item" href="https://github.com/lucyhyw"><i class="fa fa-github" aria-hidden="true"></i></a>
+	  			<a class="item" href="https://www.linkedin.com/in/heyang-lucy-wei-3038b8110?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  			</div>
+  		</div>
+  		<div class="introduction">
+  			<h1 class="ui header">Hi there! My name is Lucy.</h1>
+  		</div>
+  		<div class="description">
+  			I am an undergraduate at Brown University studying Computer Science. I enjoy <strong>coding</strong>, <strong>good design</strong>, <strong>typography</strong>, and <strong>standup comedy</strong>. <br/><br/>I have an unhealthy obsession with <a href="https://en.wikipedia.org/wiki/Big_Brother_(U.S._TV_series)" class="yellow underline">a certain reality show named after a character from dystopian fiction</a>.
+  		</div>
+  		<a class="ui inverted red button" id="view-projects" href="#">Check out what I've done.</a>
+  	</div>
+  </div>
+  <div class="ui container">
+	  <div class="ui grid" id="projects">
+	  	<div class="eight wide column img"><img src="foodatbrown.png"></div>
+	  	<div class="eight wide column"><div>
+	  		<h2 class="ui header alt">
+	  			Food@Brown
+	  		</h2>
+	  		<p>Recommends Brown University Dining Services meal items to help students maximize the value of meal plan dining credits. Meteor based.</p></div></div>
+	  	<div class="eight wide column"><div>
+	  		<h2 class="ui header">
+	  			Hidrate
+	  		</h2>
+	  		<p>
+	  		Won Best Hardware Hack at Hack@Brown. Prototype of smart-waterbottle that notifies users when they are near a water fountain and are low on water. Coded Meter-based web interface.</div></div>
+	  	<div class="eight wide column img"><img src="hidrate.jpg"></div>
+	  	<div class="eight wide column img"><img src="connect.png"></div>
+	  	<div class="eight wide column">
+	  		<div>
+	  			<h2 class="ui header alt">
+	  				Connect Model United Nations
+	  			</h2>
+	  			<p>
+	  			Website design and development for Connect Model United Nations, a high school MUN conference attracting upwards of 500 students each year. WordPress based.</div></div>
+	  	<div class="eight wide column"><div>
+	  		<h2 class="ui header">
+	  			Linda Ruan Piano
+	  		</h2>
+	  		<p>
+	  		Website design and development for Linda Ruan, a Vancouver pianist. WordPress based.</div></div>
+	  	<div class="eight wide column img"><img src="linda.png"></div>
+	  	<div class="eight wide column img"><img src="mts.png"></div>
+	  	<div class="eight wide column"><div>
+	  		<h2 class="ui header alt">
+	  			MyTutorStop.com
+	  		</h2>
+	  		<p>
+	  		Web development for MyTutorStop.com, a Vancouver-based tutor search engine. Optimized search feature built on CodeIgniter and overhauled website design and logo.</div></div>
+	  </div>
+  </div>
+  <div class="masthead" id="footer">
+  	<div class="ui container">
+  		<h2 class="ui header">Let's get in touch.</h2>
+  		<div class="ui text menu" id="navigation">
+	  			<a class="item" href="mailto: lucyhyw@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+	  			<a class="item" href="https://github.com/lucyhyw"><i class="fa fa-github" aria-hidden="true"></i></a>
+	  			<a class="item" href="https://www.linkedin.com/in/heyang-lucy-wei-3038b8110?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  		</div>
+  	</div>
+  </div>
+</body>
+</html>
+
