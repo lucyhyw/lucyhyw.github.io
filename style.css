@@ -98,11 +98,28 @@ h1.ui.header, h2.ui.header {
 #projects h2.ui.header.alt {
 	background: #F45B69;
 	box-shadow: -10px 10px 0  rgba(82, 72, 156, 0.7);
+	-moz-transition: all .2s;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+}
+
+#projects a h2.ui.header.alt:hover {
+    background: rgba(82, 72, 156, 0.7);
+    box-shadow: -10px 10px 0 #F45B5B;
 }
 
 #projects h2.ui.header {	
 	box-shadow: -10px 10px 0 #FFF26D;
 }
+
+#projects a h2.ui.header:hover {
+    background: #FFF26D;
+    box-shadow: -10px 10px 0 #59C3C3;
+    -moz-transition: all .2s;
+    transition: all .2s;
+    -webkit-transition: all .2s;	
+}
+
 .ui.grid#projects .eight.wide.column {
   display: flex;
   align-items: center;
@@ -119,3 +136,4 @@ h1.ui.header, h2.ui.header {
 }
 .ui.grid#projects .eight.wide.column.img img {
 	width: 95%;
+}
