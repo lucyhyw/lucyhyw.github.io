@@ -120,20 +120,28 @@ h1.ui.header, h2.ui.header {
     -webkit-transition: all .2s;	
 }
 
-.ui.grid#projects .eight.wide.column {
+.ui.container#projects .column {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
+  padding: 3rem;
 }
 
-.ui.grid#projects .eight.wide.column p {
+@media only screen and (max-width: 767px) {
+  #projects .ui.grid {
+	padding-bottom: 3rem!important;
+  }
+  .ui.container#projects .column	 {
+	padding-bottom: 3rem!important;
+  }
+}
+.ui.container#projects .column p {
   padding: 30px 0 0;
 }
 
-.ui.grid#projects .eight.wide.column.img {
+.ui.container#projects .column.img {
 	text-align:center;
 }
-.ui.grid#projects .eight.wide.column.img img {
-	width: 95%;
+.ui.container#projects .column.img img {
+	max-width: 95%;
 }
