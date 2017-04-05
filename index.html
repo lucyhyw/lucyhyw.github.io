@@ -4,141 +4,119 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>Lucy Wei</title>
   
-  <link href='https://fonts.googleapis.com/css?family=Cardo:400,400italic|Montserrat' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="semantic.min.css"/>
-  <link rel="stylesheet" href="style.css"/>
-
-  
-  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-  <script src="https://use.fontawesome.com/b9015655d4.js"></script>
-    <script>
-  		$(document).ready(function() {
-  			$("#view-projects").on("click", function(e) {
-  				e.preventDefault();
-  				$("body, html").animate({
-  					scrollTop: $("#projects").offset().top + 20
-  				}, 600)
-  			})
-  			$('.description').css('opacity', 0)
-  			$('.introduction').css('opacity', 0).slideDown("slow").animate(
-  				{opacity: 1},
-  				{queue: false, duration: "slow", complete: function() {
-  					$('.description').slideDown("slow").animate(
-  						{opacity: 1},
-  						{queue: false, duration: "slow"}
-  					)	
-  				}}
-  			)
-  			
-  		})
-  </script>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+  <link rel="stylesheet" href="assets/semantic.min.css"/>
+  <link rel="stylesheet" href="assets/style.css"/>
 </head>
 
 <body>
+
+  <!-- header section -->
   <div id="header" class="masthead">
-  	<div class="ui container">
-  		<div class="ui text menu" id="navigation">
-  			<div class="right menu">
-	  			<a class="item" href="mailto: lucyhyw@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-	  			<a class="item" href="https://github.com/lucyhyw"><i class="fa fa-github" aria-hidden="true"></i></a>
-	  			<a class="item" href="https://www.linkedin.com/in/heyang-lucy-wei-3038b8110?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-  			</div>
-  		</div>
-  		<div class="introduction">
-  			<h1 class="ui header">Hi there! My name is Lucy.</h1>
-  		</div>
-  		<div class="description">
-  			I am a sophomore at Brown University studying Computer Science. I enjoy <strong>coding</strong>, <strong>good design</strong>, <strong>typography</strong>, and <strong>standup comedy</strong>.
-  		</div>
-  		<a class="ui inverted red button" id="view-projects" href="#">Check out what I've done.</a>
-  	</div>
-  </div>
-  <div class="ui container" id="projects">
-    <div class="ui stackable equal width grid">
-      <div class="column img"><img src="foodatbrown.png"></div>
-      <div class="column"><div>
-        <h2 class="ui header alt">
-          Food@Brown
-        </h2>
-        <p>Recommends Brown University Dining Services meal items to help students maximize the value of meal plan dining credits. Meteor based.</p>
-      </div></div>
-    </div>
-
-    <div class="ui stackable equal width mobile reversed grid">
-      <div class="column"><div>
-        <h2 class="ui header">
-            Remind
-        </h2>
-        <p>Creates reminders for users and notifies them via text. Utilizes a natural language processor to handle commands like "remind me to call Mom next Monday at 12pm." Created with Node.js and Wit.ai.</p>
-      </div></div>
-      <div class="column img"><img src="remind.png"></div>  
-    </div>
-
-    <div class="ui stackable equal width grid">
-	  	<div class="column img"><img src="pretty-pomodoro.png"></div>
-	  	<div class="column"><div>
-	  		<a href="/pretty-pomodoro" target="_blank"><h2 class="ui header alt">
-	  			Pretty Pomodoro <i class="fa fa-external-link" aria-hidden="true" style="font-size: 14px"></i>
-	  		</h2></a>
-	  		<p>A minimalist Pomodoro timer with editable timer intervals, a full screen mode, and desktop notifications.</p>
-      </div></div>
-    </div>
-
-    <div class="ui stackable equal width mobile reversed grid">
-	  	<div class="column"><div>
-	  		<h2 class="ui header">
-	  			Hidrate
-	  		</h2>
-	  		<p>
-	  		Won Best Hardware Hack at Hack@Brown. Prototype of smart-waterbottle that notifies users when they are near a water fountain and are low on water. Coded Meter-based web interface.</div></div>
-	  	<div class="column img"><img src="hidrate.jpg"></div>
-    </div>
-
-    <div class="ui stackable equal width grid">
-	  	<div class="column img">
-        <a href="http://connectmun.ca/" target="_blank"><img src="connect.PNG"></a>
+    <div class="ui stackable two column center aligned grid">
+      <div id="title" class="ui container column">
+        <h1 class="ui header">Lucy Wei</h1>
       </div>
-	  	<div class="column"><div>
-	  			<a href="http://connectmun.ca/" target="_blank">
-            <h2 class="ui header alt">
-	  				ConnectMUN <i class="fa fa-external-link" aria-hidden="true" style="font-size: 14px"></i>
-  	  			</h2>
-          </a>
-	  			<p>Website design and development for Connect Model United Nations, a high school MUN conference attracting upwards of 500 students each year. WordPress based.</p>
-      </div></div>
-    </div>
-
-    <div class="ui stackable equal width mobile reversed grid">
-	  	<div class="column"><div>
-	  		<a href="http://lindaruan.com/" target="_blank"><h2 class="ui header">
-	  			Linda Ruan Piano <i class="fa fa-external-link" aria-hidden="true" style="font-size: 14px"></i>
-	  		</h2></a>
-	  		<p>
-	  		Website design and development for Linda Ruan, a Vancouver pianist. WordPress based.</div></div>
-	  	<div class="column img"><a href="http://lindaruan.com/" target="_blank"><img src="linda.PNG"></a></div>
-    </div>
-
-    <div class="ui stackable equal width grid">
-	  	<div class="column img"><a href="http://mytutorstop.com/" target="_blank"><img src="mts.PNG"></a></div>
-	  	<div class="column"><div>
-	  		<a href="http://mytutorstop.com/" target="_blank"><h2 class="ui header alt">
-	  			MyTutorStop.com <i class="fa fa-external-link" aria-hidden="true" style="font-size: 14px"></i>
-	  		</h2></a>
-	  		<p>
-	  		Web development for MyTutorStop.com, a Vancouver-based tutor search engine. Optimized search feature built on CodeIgniter and overhauled website design and logo.
-      </div></div>
+      <div id="description" class="ui container column">
+        <div id="description-container">
+          <p id="lead">I'm a <strong>sophomore</strong> studying Computer Science at <strong>Brown University</strong>. I'm a <strong>software engineer</strong> with a love of <em>design</em>, <em>typography</em>, and <em>standup comedy</em>.</p>
+          <p>This summer, I'll be interning at Google as an Engineering Practicum Intern.</p>
+          <div id="projects-link" class="ui button"><i class="angle double right icon"></i>Check out what I've done</div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="masthead" id="footer">
-  	<div class="ui container">
-  		<h2 class="ui header">Let's get in touch.</h2>
-  		<div class="ui text menu" id="navigation">
-	  			<a class="item" href="mailto: lucyhyw@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-	  			<a class="item" href="https://github.com/lucyhyw"><i class="fa fa-github" aria-hidden="true"></i></a>
-	  			<a class="item" href="https://www.linkedin.com/in/heyang-lucy-wei-3038b8110?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-  		</div>
-  	</div>
+
+  <!-- projects section -->
+  <div id="experience">
+    <div id="experience-container">
+      <div id="projects" class="ui container">
+        <h2 id="projects-title" class="ui header">What I've <strong>done</strong></h2>
+        <div id="cards" class="ui stackable four column grid container">
+          <div class="column card">
+            <h3 class="ui header">Food@Brown</h3>
+            <p>Recommends Brown University Dining Services meal items to help students maximize the value of meal plan dining credits. <em>Meteor</em> based.</p>
+          </div>
+          <div class="column card">
+            <h3 class="ui header">Remind</h3>
+            <p>Creates reminders for users and notifies them via text. Utilizes a natural language processor to handle commands like "remind me to call Mom next Monday at 12pm." Created with <em>Node.js</em> and <em>Wit.ai</em>.</p>
+          </div>
+          <div class="column card">
+            <h3 class="ui header">Pretty Pomodoro</h3>
+            <p>A minimalist Pomodoro timer with editable timer intervals, a full screen mode, and desktop notifications. Created with <em>Javascript</em>.</p>
+          </div>
+          <div class="column card">
+            <h3 class="ui header">Hidrate</h3>
+            <p>Won Best Hardware Hack at Hack@Brown. Prototype of smart-waterbottle that notifies users when they are near a water fountain and are low on water. Coded <em>Meteor</em>-based web interface.</p>
+          </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="learning" class="ui stackable two column grid container">
+          <div class="column">
+            <h2 class="ui header"><strong>Courses</strong> I've Taken</h2>
+            <div class="ui two column stackable grid">
+              <div class="column">
+                <div class="ui list">
+                  <div class="item">Software Engineering</div>
+                  <div class="item">Systems Programming</div>
+                  <div class="item">Applications of Linear Algebra in CS</div>
+                  <div class="item">Data Structures and Algorithms</div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="ui list">
+                  <div class="item">Object Oriented Programming</div>
+                  <div class="item">Functional Programming</div>
+                  <div class="item">Evaluating and Designing UI</div>
+                  <div class="item">Discrete Structures and Probability</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <h2 class="ui header">What I've <strong>learned</strong></h2>
+            <div class="ui two column stackable grid">
+              <div class="column">
+                <div class="ui list">
+                  <div class="item">Java</div>
+                  <div class="item">Python</div>
+                  <div class="item">Scala</div>
+                  <div class="item">C</div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="ui list">
+                  <div class="item">HTML/CSS</div>
+                  <div class="item">Javascript</div>
+                  <div class="item">Git</div>
+                  <div class="item">Racket</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+  <!-- contact section -->
+  <div id="contact">
+    <div class="ui container">
+      <h2 class="ui header">Contact Me</h2>
+      <p>I'd love to get in touch. Drop me an <a href="mailto: lucyhyw@gmail.com">email</a>, find me on <a href="https://www.linkedin.com/in/heyang-lucy-wei-3038b8110">LinkedIn</a>, or view my projects on <a href="https://github.com/lucyhyw">GitHub</a>. You can also view my <a href="assets/resume.pdf">full resume</a>.</p>
+      <div id="social" class="ui center aligned container">
+        <a href="mailto: lucyhyw@gmail.com"><i class="envelope icon"></i></a>
+        <a href="https://github.com/lucyhyw"><i class="github icon" ></i></a>
+        <a href="https://www.linkedin.com/in/heyang-lucy-wei-3038b8110"><i class="linkedin icon" ></i></a>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script src="assets/scripts.js"></script>
+  <script src="https://use.typekit.net/uzm4xnc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </body>
 </html>
 
